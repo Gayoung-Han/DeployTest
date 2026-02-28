@@ -1,6 +1,6 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
-import './App.css'
+
 
 import DefaultPage from "./views/DefaultPage"
 import FirstPage from "./views/FirstPage"
