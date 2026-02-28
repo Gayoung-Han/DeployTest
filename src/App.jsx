@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import './App.css'
 
@@ -6,35 +6,17 @@ import DefaultPage from "./views/DefaultPage"
 import FirstPage from "./views/FirstPage"
 import SecondPage from "./views/SecondPage"
 
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout/>,
-    children: [
-      {
-        index: true,
-        element: <DefaultPage/>
-      },
-      {
-        path: "/firstPage",
-        element: <FirstPage/>
-      },
-      {
-        path: "/secondPage",
-        element: <SecondPage/>
-      }
-    ]
-  }
-],
-  {
-    basename: "/DeployTest"
-  }
-)
-
 function App() {
   return (
-    <RouterProvider router={router} />
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<DefaultPage />} />
+          <Route path="firstPage" element={<FirstPage />} />
+          <Route path="secondPage" element={<SecondPage />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   )
 }
 
