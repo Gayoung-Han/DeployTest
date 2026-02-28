@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   }
 ],
   {
-    basename: "/deployTest"
+    basename: "/DeployTest"
   }
 )
 
