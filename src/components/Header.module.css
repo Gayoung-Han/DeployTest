@@ -1,0 +1,31 @@
+/* Header.module.css */
+
+.header {
+  background-color: #333; /* 어두운 배경색 */
+  padding: 15px 20px;    /* 위아래 15px, 좌우 20px 패딩 */
+  color: white;          /* 텍스트 색상 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+}
+
+.navbar {
+  display: flex;         /* 자식 요소들을 가로로 나열 */
+  justify-content: flex-start; /* 시작점에서 정렬 */
+  align-items: center;   /* 세로 중앙 정렬 */
+  gap: 30px;             /* 링크들 사이의 간격 */
+}
+
+/* Link 태그 자체는 블록 요소가 아니므로 p 태그에 스타일 적용 */
+.navItem {
+  margin: 0;             /* p 태그 기본 마진 제거 */
+}
+
+.navLink {
+  color: white;              /* 링크 텍스트 색상 */
+  text-decoration: none;     /* 밑줄 제거 */
+  font-weight: bold;         /* 굵게 */
+  transition: color 0.3s ease; /* 색상 변경 시 부드러운 전환 효과 */
+}
+
+.navLink:hover {
+  color: #ffcc00; /* 마우스 오버 시 강조 색상 */
+}
